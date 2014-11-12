@@ -25,6 +25,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <memory>
 using namespace std;
 
 #define POPULATE(t) \
@@ -124,6 +125,8 @@ int main(void) {
     POPULATE(structb_t);
     POPULATE(structc_t);
     POPULATE(structd_t); // This will surprise on i686 machines, with size 16 bytes at an alignment of 4 bytes
+
+    POPULATE(std::shared_ptr<int>);
 
     POPULATE(ref_size_t);
     POPULATE(ref_offset_t);
