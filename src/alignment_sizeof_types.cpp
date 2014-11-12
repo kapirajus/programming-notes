@@ -73,6 +73,14 @@ struct structd_t {
   char        c;
 };
 
+class ref_size_t {
+public:
+    ref_size_t(int &y) : x(y) {}
+
+private:
+    int &x;
+};
+
 int main(void) {
   POPULATE(char);
   POPULATE(short);
@@ -106,6 +114,8 @@ int main(void) {
   POPULATE(structb_t);
   POPULATE(structc_t);
   POPULATE(structd_t);
+
+  POPULATE(ref_size_t);
 
   return 0;
 }
