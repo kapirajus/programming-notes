@@ -113,7 +113,7 @@ int main(void) {
   POPULATE(structa_t);
   POPULATE(structb_t);
   POPULATE(structc_t);
-  POPULATE(structd_t);
+  POPULATE(structd_t); // This will surprise on i686 machines, with size 16 bytes at an alignment of 4 bytes
 
   POPULATE(ref_size_t);
 
