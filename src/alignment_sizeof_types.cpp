@@ -120,6 +120,8 @@ int main(void) {
     POPULATE(uint32_t);
     POPULATE(uint64_t);
 
+    POPULATE(uintptr_t);
+
     POPULATE(Sample);
     POPULATE(structa_t);
     POPULATE(structb_t);
@@ -127,6 +129,7 @@ int main(void) {
     POPULATE(structd_t); // This will surprise on i686 machines, with size 16 bytes at an alignment of 4 bytes
 
     POPULATE(std::shared_ptr<int>);
+    POPULATE(std::unique_ptr<int>);
 
     POPULATE(ref_size_t);
     POPULATE(ref_offset_t);
